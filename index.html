@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container my-4">
+            <h1 class="my-4 text-center">Chatz</h1>
+            <div class="chat-rooms mb-3 text-center">
+            <div class="my-2">Choose a chatroom:</div>
+                <button class="btn" id="general">#general</button>
+                <button class="btn" id="gaming">#gaming</button>
+                <button class="btn" id="music">#music</button>
+                <button class="btn" id="ninjas">#ninjas</button>
+            </div>
+                  <!-- chat list / window -->
+            <div class="chat-window">
+                <ul class="chat-list list-group"></ul>
+            </div>
+                  <!-- new chat form -->
+            <form class="new-chat my-3">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    <div class="input-group-text">Your message:</div>
+                    </div>
+                    <input type="text" id="message" class="form-control" required>
+                    <div class="input-group-append">
+                    <input type="submit" class="btn" value="send">
+                    </div>
+                </div>
+            </form>
+                  <!-- update name form -->
+            <form class="new-name my-3">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    <div class="input-group-text">Update name:</div>
+                    </div>
+                    <input type="text" id="name" class="form-control" required>
+                    <div class="input-group-append">
+                    <input type="submit" class="btn" value="update">
+                    </div>
+                </div>
+                <div class="update-mssg"></div>
+            </form>
+        </div>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-firestore.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyDmwjrxWlyW6fOY_skr8A0TeL6tmVa4s4Q",
+                authDomain: "chats-2447a.firebaseapp.com",
+                databaseURL: "https://chats-2447a.firebaseio.com",
+                projectId: "chats-2447a",
+                storageBucket: "chats-2447a.appspot.com",
+                messagingSenderId: "67954724407",
+                appId: "1:67954724407:web:03a9d6fdb30abd9830f9b2",
+                measurementId: "G-03Q8VKKV27"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+            firebase.analytics();
+        </script>
+        
+        <script src="scripts/app.js" async defer></script>
+        <script src="scripts/ui.js" async defer></script>
+        <script src="scripts/chat.js" async defer></script>
+        
+    </body>
+</html>

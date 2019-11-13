@@ -43,6 +43,7 @@ class Chatroom {
     }
     updateName(username){
         this.username = username;
+        localStorage.setItem('username', username)
 
     }
     updateRoom(room){
@@ -56,17 +57,3 @@ class Chatroom {
 
 }
 
-const chatroom = new Chatroom('general', 'martins');
-
-chatroom.getChats((data)=>{
-    console.log(data)
-})
-
-setTimeout(()=>{
-    chatroom.updateRoom('gaming')
-    chatroom.updateName('jenny')
-    chatroom.getChats((data)=>{
-        console.log(data)
-    })
-    chatroom.addChat('hello')
-}, 3000)

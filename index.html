@@ -53,6 +53,7 @@
             </form>
         </div>
         <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-firestore.js"></script>
 
@@ -77,10 +78,11 @@
             const db = firebase.firestore();
             firebase.analytics();
         </script>
-        
-        <script src="scripts/app.js" async defer></script>
-        <script src="scripts/ui.js" async defer></script>
         <script src="scripts/chat.js" async defer></script>
+        <script src="scripts/ui.js" async defer></script>
+        <script src="scripts/app.js" async defer></script>
+        
+        
         
     </body>
 </html>

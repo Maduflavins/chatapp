@@ -1,6 +1,5 @@
 // render chats to the DOM
 // clear chats when the room is changed
-
 class ChatUI{
     constructor(list){
         this.list = list
